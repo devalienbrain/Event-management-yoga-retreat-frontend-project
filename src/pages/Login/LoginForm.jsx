@@ -1,14 +1,17 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
 import auth from "../../../public/firebase/firebase.config";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const LoginForm = () => {
+  const { signIn } = useContext(AuthContext);
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
-    signInWithEmailAndPassword(auth, email, password)
+
+    signIn(auth, email, password)
       .then((res) => {
         console.log(res.user);
       })

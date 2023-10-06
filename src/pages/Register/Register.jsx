@@ -1,13 +1,13 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
-
 import auth from "../../../public/firebase/firebase.config";
 
-// import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -33,7 +33,7 @@ const Register = () => {
       return;
     }
 
-    createUserWithEmailAndPassword(auth, email, password)
+    createUser(auth, email, password)
       .then((res) => {
         console.log(res.user);
         setSuccessMessage("User craeted successfully!");
@@ -81,7 +81,7 @@ const Register = () => {
                 onClick={handlePasswordVisibility}
                 className="absolute -ml-7 mt-4"
               >
-                {/* {showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>} */}
+                {showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}
               </span>
             </div>
             <div className="text-xs">

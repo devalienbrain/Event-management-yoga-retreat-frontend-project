@@ -1,5 +1,3 @@
-import NavBar from "../../components/Header/NavBar";
-
 import LoginForm from "./LoginForm";
 const Login = () => {
   return (
