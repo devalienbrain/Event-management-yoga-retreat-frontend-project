@@ -4,11 +4,7 @@ const Features = () => {
     <div className="text-center">
       <h3 className="text-3xl font-black">Our Strategies</h3>
       <div>
-        <img
-          className="mx-auto w-full border border-purple-900"
-          src={featuresImg}
-          alt=""
-        />
+        <img className="mx-auto w-full " src={featuresImg} alt="" />
       </div>
     </div>
   );
