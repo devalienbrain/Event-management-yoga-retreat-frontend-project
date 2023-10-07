@@ -2,7 +2,7 @@ const ServiceCard = ({ serviceData }) => {
   console.log(serviceData);
   const { name, image, price, short_description } = serviceData || {};
   return (
-    <div className="rounded-lg flex flex-col lg:flex-row border border-purple-500">
+    <div className="rounded-lg flex flex-col lg:flex-row border border-purple-200 drop-shadow-xl">
       <img
         className="rounded-l-lg rounded-r-none"
         src={image}
