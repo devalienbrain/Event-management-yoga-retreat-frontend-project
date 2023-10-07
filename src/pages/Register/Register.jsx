@@ -33,10 +33,10 @@ const Register = () => {
       return;
     }
 
-    createUser(auth, email, password)
+    createUser(email, password)
       .then((res) => {
         console.log(res.user);
-        setSuccessMessage("User craeted successfully!");
+        setSuccessMessage("User created successfully!");
       })
       .catch((error) => {
         console.error(error);
@@ -84,14 +84,21 @@ const Register = () => {
                 {showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}
               </span>
             </div>
-            <div className="text-xs">
-              <input type="checkbox" name="checkbox" id="chk" />
+            <div className="text-xs flex align-middle justify-center">
+              <input
+                type="checkbox"
+                name="checkbox"
+                id="chk"
+                className="mr-2"
+              />
               <label htmlFor="chk">
                 Accept the <a href="">terms and conditions</a>{" "}
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-secondary">Register</button>
+              <button className="btn bg-red-600 text-white hover:bg-red-500">
+                Register
+              </button>
             </div>
           </form>
           {successMessage && (

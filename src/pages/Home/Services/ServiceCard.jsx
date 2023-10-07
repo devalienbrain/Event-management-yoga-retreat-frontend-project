@@ -11,7 +11,7 @@ const ServiceCard = ({ serviceData }) => {
         alt="Alternative Image"
       />
       <div className="p-4 text-center md:text-left">
-        <h3 className="text-black text-xl font-semibold mb-3">{name}</h3>
+        <h3 className="text-lg font-bold text-purple-800 mb-3">{name}</h3>
         <p className="text-xs">{short_description}</p>
         <h2 className="my-3 text-xl font-bold">US${price}</h2>
         <Link to={`/serviceDetails/${id}`}>

@@ -1,5 +1,4 @@
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
 const firebaseConfig = {
   apiKey: "AIzaSyB-_u3N0l0Q095y2yFrVRe18I9NAhwX4DQ",
   authDomain: "event-management-yoga.firebaseapp.com",
@@ -10,6 +9,5 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
 
-export default auth;
+export default app;

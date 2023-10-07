@@ -11,7 +11,7 @@ const LoginForm = () => {
     const password = e.target.password.value;
     console.log(email, password);
 
-    signIn(auth, email, password)
+    signIn(email, password)
       .then((res) => {
         console.log(res.user);
       })
@@ -43,7 +43,9 @@ const LoginForm = () => {
             />
 
             <div className="form-control mt-6">
-              <button className="btn btn-danger">Login</button>
+              <button className="btn bg-purple-500 hover:bg-purple-400 text-white">
+                Login
+              </button>
             </div>
           </form>
           <p className="text-red-600 text-center text-xs mb-5">

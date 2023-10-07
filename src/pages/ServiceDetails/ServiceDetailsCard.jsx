@@ -3,7 +3,7 @@ const ServiceDetailsCard = ({ service }) => {
   return (
     <div className="m-10 rounded">
       <h3 className="mt-10 text-3xl font-black text-center my-5">
-        <span className="font-semibold text-2xl text-purple-500">
+        <span className="font-bold text-2xl text-purple-600">
           {" "}
           Event {id}:{" "}
         </span>{" "}
@@ -11,10 +11,10 @@ const ServiceDetailsCard = ({ service }) => {
       </h3>
       <h3 className="text-center my-5">
         {" "}
-        <span className="font-bold text-xl mr-5 text-purple-700">
-          Event Price: US ${price}
+        <span className="font-black text-2xl mr-5 text-purple-800">
+          Price: US ${price}
         </span>
-        <button className="text-purple-800 border bg-red-200 border-purple-200 hover:bg-purple-200 font-semibold text-sm px-3 py-2 rounded-md">
+        <button className="bg-red-600 text-white hover:bg-purple-700 font-semibold text-sm px-3 py-2">
           Book Now
         </button>
       </h3>
