@@ -46,18 +46,32 @@ const NavBar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        {user?.displayName}
-        <img className="w-8 rounded-full" src={user?.photoURL} alt="" />
-        <Link to="/login">
-          <button className="px-4 py-2 font-semibold bg-green-700 text-white hover:bg-green-600 drop-shadow-lg">
-            Login
-          </button>
-        </Link>
-        <Link to="/register">
-          <button className="ml-3 px-4 py-2 font-semibold bg-red-600 text-white hover:bg-red-500 drop-shadow-xl">
-            Register
-          </button>
-        </Link>
+        {user ? (
+          <div className="flex items-center">
+            <span>{user?.displayName}</span>
+            <img
+              className="ml-3 w-8 rounded-full"
+              src={user?.photoURL}
+              alt=""
+            />
+            <button className="ml-3 px-4 py-2 font-semibold bg-red-600 text-white hover:bg-red-500 drop-shadow-xl">
+              Sign Out
+            </button>
+          </div>
+        ) : (
+          <div>
+            <Link to="/login">
+              <button className="px-4 py-2 font-semibold bg-green-700 text-white hover:bg-green-600 drop-shadow-lg">
+                Login
+              </button>
+            </Link>
+            <Link to="/register">
+              <button className="ml-3 px-4 py-2 font-semibold bg-red-600 text-white hover:bg-red-500 drop-shadow-xl">
+                Register
+              </button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
