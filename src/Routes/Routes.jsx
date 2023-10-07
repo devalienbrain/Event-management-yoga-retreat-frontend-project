@@ -5,6 +5,8 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import ShowServiceDetails from "../pages/ServiceDetails/ShowServiceDetails";
+import FreeCounselling from "../pages/FreeCounselling/FreeCounselling";
+import Tutorials from "../pages/Tutorials/Tutorials";
 
 const routes = createBrowserRouter([
   {
@@ -29,6 +31,14 @@ const routes = createBrowserRouter([
         path: "/serviceDetails/:id",
         element: <ShowServiceDetails></ShowServiceDetails>,
         loader: () => fetch("/public/data.json"),
+      },
+      {
+        path: "/counselling",
+        element: <FreeCounselling></FreeCounselling>,
+      },
+      {
+        path: "/tutorials",
+        element: <Tutorials></Tutorials>,
       },
     ],
   },
