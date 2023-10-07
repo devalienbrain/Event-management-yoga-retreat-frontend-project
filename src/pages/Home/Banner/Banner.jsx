@@ -16,7 +16,7 @@ const Banner = () => {
           <h1 className="mb-5 text-2xl md:text-5xl text-white font-black">
             Enrich your life with an unforgettable yoga retreat
           </h1>
-          <h3 className="mb-5 text-red-400 font-black">
+          <h3 className="mb-5 text-red-600 font-black">
             Yoga And Fitness Retreats By Dr. Fatiha
           </h3>
         </div>
