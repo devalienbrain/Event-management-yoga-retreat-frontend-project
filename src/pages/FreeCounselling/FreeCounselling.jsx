@@ -1,7 +1,7 @@
 import { FcPhone } from "react-icons/fc";
 const FreeCounselling = () => {
   return (
-    <div className="flex flex-col gap-11 min-h-screen justify-center items-center bg-red-50">
+    <div className="flex flex-col gap-11 min-h-screen justify-center items-center bg-purple-100">
       <h2 className="text-4xl font-black text-red-900">Tips & Tricks</h2>
       <h1 className="text-5xl font-bold">Get Free Counselling Here..</h1>
       <div className="mx-auto py-5 font-semibold text-center text-white">

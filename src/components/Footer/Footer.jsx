@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="bg-purple-100 text-center py-16">
+    <div className="bg-purple-200 text-center py-16">
       <h3 className="font-bold">Yoga And Fitness Retreats</h3>
       <p>
         <small>
