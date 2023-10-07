@@ -7,6 +7,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import ShowServiceDetails from "../pages/ServiceDetails/ShowServiceDetails";
 import FreeCounselling from "../pages/FreeCounselling/FreeCounselling";
 import Tutorials from "../pages/Tutorials/Tutorials";
+import PrivateRoute from "./PrivateRoute";
 
 const routes = createBrowserRouter([
   {
@@ -29,16 +30,29 @@ const routes = createBrowserRouter([
       },
       {
         path: "/serviceDetails/:id",
-        element: <ShowServiceDetails></ShowServiceDetails>,
+        element: (
+          <PrivateRoute>
+            {" "}
+            <ShowServiceDetails></ShowServiceDetails>{" "}
+          </PrivateRoute>
+        ),
         loader: () => fetch("/public/data.json"),
       },
       {
         path: "/counselling",
-        element: <FreeCounselling></FreeCounselling>,
+        element: (
+          <PrivateRoute>
+            <FreeCounselling></FreeCounselling>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/tutorials",
-        element: <Tutorials></Tutorials>,
+        element: (
+          <PrivateRoute>
+            <Tutorials></Tutorials>
+          </PrivateRoute>
+        ),
       },
     ],
   },
