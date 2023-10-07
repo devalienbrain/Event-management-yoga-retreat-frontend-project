@@ -9,10 +9,10 @@ const ServiceCard = ({ serviceData }) => {
         alt="Alternative Image"
       />
       <div className="p-4 text-center md:text-left">
-        <h3 className="text-black text-xl font-semibold mb-2">{name}</h3>
-        <p>{short_description}</p>
-        <h2 className="mb-2">US${price}</h2>
-        <button className="text-purple-800 border bg-purple-100 border-purple-200 hover:bg-purple-200 font-semibold px-3 py-2 rounded-md">
+        <h3 className="text-black text-xl font-semibold mb-3">{name}</h3>
+        <p className="text-xs">{short_description}</p>
+        <h2 className="my-3 text-xl font-bold">US${price}</h2>
+        <button className="text-purple-800 border bg-purple-100 border-purple-200 hover:bg-purple-200 font-semibold text-sm px-3 py-2 rounded-md">
           View Details
         </button>
       </div>
