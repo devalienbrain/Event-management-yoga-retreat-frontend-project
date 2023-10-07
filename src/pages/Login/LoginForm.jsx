@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const LoginForm = () => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, loginGoogle } = useContext(AuthContext);
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -19,6 +19,12 @@ const LoginForm = () => {
         console.error(error);
       });
   };
+
+  const handleGoogleLogin = () =>
+    loginGoogle()
+      .then((res) => console.log(res.user))
+      .catch((err) => console.log(err));
+
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col">
@@ -52,6 +58,17 @@ const LoginForm = () => {
             Not register before?{" "}
             <Link to="/register"> please register first </Link>
           </p>
+          <h2 className="text-center text-blue-950">Or,</h2>
+          <div className="py-5 font-semibold text-center text-white ">
+            <button
+              onClick={handleGoogleLogin}
+              className="px-4 py-2 border bg-blue-950 hover:bg-blue-900 font-bold rounded-md"
+            >
+              {" "}
+              Login with Google
+            </button>
+          </div>
+          r{" "}
         </div>
       </div>
     </div>
