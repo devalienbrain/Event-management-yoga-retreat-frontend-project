@@ -22,7 +22,7 @@ const LoginForm = () => {
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col">
-        <h2 className="text-green-700 text-xl">Please Login</h2>
+        <h2 className="text-green-700 text-2xl font-black">Please Login</h2>
 
         <div className="card w-full max-w-sm shadow-2xl bg-base-100">
           <form

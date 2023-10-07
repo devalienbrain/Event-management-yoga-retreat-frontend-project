@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Reboot Your Life",
+    "image": "https://i.ibb.co/hZFRx9S/yoga-service1.png",
+    "price": 599,
+    "short_description": "5 Day Welness Retreat in Thanchi, Bandarban."
+  },
+  {
+    "id": 2,
+    "name": "Yoga and Meditation",
+    "image": "https://i.ibb.co/S093XCV/yoga-service2.png",
+    "price": 199,
+    "short_description": "7 Day Yoga and Meditation Wellness Retreat at Banani, Dhaka."
+  },
+  {
+    "id": 3,
+    "name": "Urban Yoga Retreat",
+    "image": "https://i.ibb.co/cYKGjYB/yoga-service3.png",
+    "price": 299,
+    "short_description": "6 Day Urban Yoga Retreat at Gulshan Park, Dhaka."
+  },
+  {
+    "id": 4,
+    "name": "Sound Healing Meditation",
+    "image": "https://i.ibb.co/3pLrdbM/yoga-service4.png",
+    "price": 399,
+    "short_description": "4 Day Rural Sound Healing, Hiking and Yoga Retreat in Amirabari Village."
+  },
+  {
+    "id": 5,
+    "name": "Sunset Meditation",
+    "image": "https://i.ibb.co/b5dnwVV/yoga-service5.png",
+    "price": 599,
+    "short_description": "6 Day Sunset Meditation and Yoga in Cox's Bazar Sea Beach."
+  },
+  {
+    "id": 6,
+    "name": "Kids Yoga and Meditation",
+    "image": "https://i.ibb.co/WDsCzMx/yoga-service6.png",
+    "price": 99,
+    "short_description": " 7 Day Yoga, Meditation and Mental Development Wellness Retreat for Kids in the Heart of Dhaka City."
+  }
+]
