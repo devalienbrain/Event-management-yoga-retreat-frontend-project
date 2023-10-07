@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const ServiceCard = ({ serviceData }) => {
-  console.log(serviceData);
+  // console.log(serviceData);
   const { id, name, image, price, short_description } = serviceData || {};
   return (
     <div className="rounded-lg flex flex-col lg:flex-row border border-purple-200 drop-shadow-xl">

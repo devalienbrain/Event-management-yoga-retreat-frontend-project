@@ -1,17 +1,17 @@
-import auth from "../../../public/firebase/firebase.config";
-
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-
+  const [userImage, setUserImage] = useState({});
+  console.log(userImage);
   const handleRegister = (e) => {
     e.preventDefault();
     setErrorMessage("");
@@ -37,6 +37,12 @@ const Register = () => {
       .then((res) => {
         console.log(res.user);
         setSuccessMessage("User created successfully!");
+        // updateCreatedUser(name);
+        updateProfile(res.user, {
+          displayName: name,
+        })
+          .then(() => console.log("Profile Updated"))
+          .catch((err) => console.log(err));
       })
       .catch((error) => {
         console.error(error);
@@ -83,6 +89,13 @@ const Register = () => {
               >
                 {showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}
               </span>
+
+              <input
+                type="file"
+                name="user_img"
+                id=""
+                onChange={(e) => setUserImage(e.target.files)}
+              />
             </div>
             <div className="text-xs flex align-middle justify-center">
               <input
