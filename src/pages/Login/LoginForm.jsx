@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import auth from "../../../public/firebase/firebase.config";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { FcGoogle } from "react-icons/fc";
 
 const LoginForm = () => {
   const { signIn, loginGoogle } = useContext(AuthContext);
@@ -59,16 +59,16 @@ const LoginForm = () => {
             <Link to="/register"> please register first </Link>
           </p>
           <h2 className="text-center text-blue-950">Or,</h2>
-          <div className="py-5 font-semibold text-center text-white ">
+
+          <div className="mx-auto py-5 font-semibold text-center text-white">
             <button
               onClick={handleGoogleLogin}
-              className="px-4 py-2 border bg-blue-950 hover:bg-blue-900 font-bold rounded-md"
+              className="px-4 py-2 border bg-blue-950 hover:bg-blue-900 font-bold rounded-md flex items-center gap-3"
             >
-              {" "}
+              <FcGoogle></FcGoogle>
               Login with Google
             </button>
           </div>
-          r{" "}
         </div>
       </div>
     </div>
