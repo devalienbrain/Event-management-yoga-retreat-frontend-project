@@ -47,8 +47,16 @@ const NavBar = () => {
       </div>
       <div className="navbar-end">
         {user?.displayName}
-        <Link to="/login" className="btn btn-ghost">
-          Login
+        <img className="w-8 rounded-full" src={user?.photoURL} alt="" />
+        <Link to="/login">
+          <button className="px-4 py-2 font-semibold bg-green-700 text-white hover:bg-green-600 drop-shadow-lg">
+            Login
+          </button>
+        </Link>
+        <Link to="/register">
+          <button className="ml-3 px-4 py-2 font-semibold bg-red-600 text-white hover:bg-red-500 drop-shadow-xl">
+            Register
+          </button>
         </Link>
       </div>
     </div>

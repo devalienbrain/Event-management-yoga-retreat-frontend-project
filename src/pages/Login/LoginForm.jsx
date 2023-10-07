@@ -43,7 +43,7 @@ const LoginForm = () => {
             />
 
             <div className="form-control mt-6">
-              <button className="btn bg-purple-500 hover:bg-purple-400 text-white">
+              <button className="btn bg-green-700 hover:bg-green-600 text-white">
                 Login
               </button>
             </div>
