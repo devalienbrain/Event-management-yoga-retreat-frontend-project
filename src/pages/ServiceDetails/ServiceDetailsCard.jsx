@@ -14,7 +14,7 @@ const ServiceDetailsCard = ({ service }) => {
         <span className="font-black text-2xl mr-5 text-purple-800">
           Price: US ${price}
         </span>
-        <button className="bg-red-600 text-white hover:bg-purple-700 font-semibold text-sm px-3 py-2">
+        <button className="bg-purple-950 text-white hover:bg-purple-800 font-semibold text-sm px-3 py-2">
           Book Now
         </button>
       </h3>
