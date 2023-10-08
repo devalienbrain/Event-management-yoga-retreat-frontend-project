@@ -33,7 +33,7 @@ const Register = () => {
 
     if (!/^(?=.*[A-Z])(?=.*\d{6,})(?=.*[^A-Za-z0-9]).*$/.test(password)) {
       setErrorMessage(
-        "ERROR: Password must contain at least one uppercase letter, one special character, and be at least 6 characters long."
+        "Password must contain at least one uppercase letter, one special character, and be at least 6 characters long."
       );
       return;
     }

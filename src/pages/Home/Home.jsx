@@ -4,16 +4,27 @@ import Features from "./Features/Features";
 import Services from "./Services/Services";
 import Team from "./Team/Team";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const Home = () => {
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  }, []);
   const servicesData = useLoaderData();
   // console.log(servicesData);
   return (
     <div>
       <Banner></Banner>
       <div className="container mx-auto">
-        <Services servicesData={servicesData}></Services>
+        <div data-aos="fade-right">
+          <Services servicesData={servicesData}></Services>
+        </div>
         <Features></Features>
-        <Team></Team>
+        <div data-aos="fade-left">
+          <Team></Team>
+        </div>
       </div>
     </div>
   );
