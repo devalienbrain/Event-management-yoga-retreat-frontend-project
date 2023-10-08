@@ -1,6 +1,6 @@
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
@@ -12,6 +12,8 @@ const Register = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
+  const navigate = useNavigate();
+
   const handleRegister = (e) => {
     e.preventDefault();
     setErrorMessage("");
@@ -21,16 +23,17 @@ const Register = () => {
     const password = e.target.password.value;
 
     e.target.name.value = "";
+    e.target.photo.value = "";
     e.target.email.value = "";
     e.target.password.value = "";
-
+    e.target.checkbox.checked = false;
     console.log(name, email, password);
 
     setErrorMessage("");
 
-    if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$/.test(password)) {
+    if (!/^(?=.*[A-Z])(?=.*\d{6,})(?=.*[^A-Za-z0-9]).*$/.test(password)) {
       setErrorMessage(
-        "Password must contain at least one letter, one digit, and be at least 6 characters long."
+        "ERROR: Password must contain at least one uppercase letter, one special character, and be at least 6 characters long."
       );
       return;
     }
@@ -39,8 +42,8 @@ const Register = () => {
       .then((res) => {
         console.log(res.user);
         toast("Congratulations! Your Registration Is Successful!");
-
-        return updateProfile(res.user, {
+        navigate("/");
+        updateProfile(res.user, {
           displayName: name,
           photoURL: photo,
         });
@@ -53,7 +56,7 @@ const Register = () => {
         setErrorMessage(error.message);
       });
   };
-  
+
   const handlePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
