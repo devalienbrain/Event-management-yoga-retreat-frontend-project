@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
@@ -8,17 +10,25 @@ import { ToastContainer, toast } from "react-toastify";
 const LoginForm = () => {
   const { signIn, loginGoogle } = useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
-
+    e.target.email.value = "";
+    e.target.password.value = "";
+    setErrorMessage("");
     signIn(email, password)
       .then((res) => {
         console.log(res.user);
         toast("WOW! You Are Successfuly Logged In");
+
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
@@ -31,8 +41,13 @@ const LoginForm = () => {
       .then((res) => {
         console.log(res.user);
         toast("WOW! You Are Successfuly Logged In");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((err) => console.log(err));
+
+  const handlePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   return (
     <>
@@ -52,13 +67,20 @@ const LoginForm = () => {
                 placeholder="email"
                 className="input input-bordered"
               />
-              <input
-                type="password"
-                name="password"
-                placeholder="password"
-                className="input input-bordered"
-              />
-
+              <div>
+                <input
+                  type={showPassword ? "text" : "password"}
+                  name="password"
+                  placeholder="password"
+                  className="input input-bordered"
+                />
+                <span
+                  onClick={handlePasswordVisibility}
+                  className="absolute -ml-7 mt-4"
+                >
+                  {showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}
+                </span>
+              </div>
               <div className="form-control mt-6">
                 <button className="btn bg-green-700 hover:bg-green-600 text-white">
                   Login
