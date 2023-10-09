@@ -18,9 +18,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A: `{}`
 
-<i>Write your explanation here</i>
+<i> Here "greeting" is defined by let, but undefined, because it has not assigned a value. Otherwise "greetign" is by default declared using 'var' and assigned a value of empty object {}. Thats why the empty object {} will be output in console. </i>
 
 </p>
 </details>
@@ -43,9 +43,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C: `"12"`
 
-<i>Write your explanation here</i>
+<i>Here in sum function 'a' takes parameter a number 2, while 'b' takes a parameter string '2'. So inside sum '+' operator performs string concatenation. Thats why sum returns a string "12" as output. </i>
 
 </p>
 </details>
@@ -69,9 +69,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A: `['🍕', '🍫', '🥑', '🍔']`
 
-<i>Write your explanation here</i>
+<i> Here "food" is an array and "info" is an object. Initially in info object favoriteFood property is set to the first element of the food array "🍕". Then, reassigning the info.favoriteFood property to "🍝". However, it will change the info object favoriteFood property value. But the food array will remain unchanged. Because the reference to athe array 1st element is not changed. </i>
 
 </p>
 </details>
@@ -94,9 +94,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B: `Hi there, undefined`
 
-<i>Write your explanation here</i>
+<i>Here passing a callback function "sayHi()" to the function "sayHi" as a parameter "name". But in this case sayHi() calback function does not have any arguments to pass. Thats why it will show undefined.</i>
 
 </p>
 </details>
@@ -124,7 +124,7 @@ console.log(count);
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>Here initially "count" is 0. The forEach method over the array "nums" will checks if the element is truthy. Here, 0 is considered falsy, and other (1, 2, 3) numbers are truthy. So, count will increment 3 times by 1 and finally its value will be 3.</i>
 
 </p>
 </details>
