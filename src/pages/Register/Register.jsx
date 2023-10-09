@@ -41,6 +41,9 @@ const Register = () => {
     createUser(email, password)
       .then((res) => {
         console.log(res.user);
+        setTimeout(() => {
+          document.location.reload();
+        }, 5000);
         toast("Congratulations! Your Registration Is Successful!");
         navigate("/");
         updateProfile(res.user, {
