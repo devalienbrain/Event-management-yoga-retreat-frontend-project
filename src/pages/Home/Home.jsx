@@ -18,11 +18,11 @@ const Home = () => {
     <div>
       <Banner></Banner>
       <div className="container mx-auto">
-        <div data-aos="fade-right">
+        <div data-aos="fade">
           <Services servicesData={servicesData}></Services>
         </div>
         <Features></Features>
-        <div data-aos="fade-left">
+        <div data-aos="fade">
           <Team></Team>
         </div>
       </div>

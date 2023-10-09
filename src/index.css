@@ -4,9 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  overflow: hidden;
-}
+/* body{
+  overflow-x: hidden;
+  overflow-y: scroll;
+} */
 
 font-poppins{
   font-family: 'Poppins', sans-serif;
