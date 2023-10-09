@@ -122,7 +122,7 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C: 3
 
 <i>Here initially "count" is 0. The forEach method over the array "nums" will checks if the element is truthy. Here, 0 is considered falsy, and other (1, 2, 3) numbers are truthy. So, count will increment 3 times by 1 and finally its value will be 3.</i>
 
