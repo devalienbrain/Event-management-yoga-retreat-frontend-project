@@ -8,11 +8,45 @@ const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
   const links = (
     <>
-      <NavLink to="/">Home</NavLink>
-      <NavLink className="mx-0 lg:mx-5" to="/counselling">
-        Free Counselling
-      </NavLink>
-      <NavLink to="/tutorials">Tutorials</NavLink>
+      <div className="flex flex-col lg:flex-row gap-4">
+        <NavLink
+          to="/"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "border px-2 py-1 border-purple-950 rounded-md"
+              : "border px-2 py-1 border-purple-300 rounded-md"
+          }
+        >
+          Home
+        </NavLink>
+
+        <NavLink
+          to="/counselling"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "border px-2 py-1 border-purple-950 rounded-md"
+              : "border px-2 py-1 border-purple-300 rounded-md"
+          }
+        >
+          Free Counselling
+        </NavLink>
+        <NavLink
+          to="/tutorials"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "border px-2 py-1 border-purple-950 rounded-md"
+              : "border px-2 py-1 border-purple-300 rounded-md"
+          }
+        >
+          Tutorials
+        </NavLink>
+      </div>
     </>
   );
 
