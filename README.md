@@ -2,7 +2,6 @@
 
 ## Live Site Link: (https://event-management-yoga.web.app/)
 
-Click here for the private repo: (https://github.com/programming-hero-web-course-4/b8a9-event-management-devalienbrain)
 
 The Features and Functionalities of this website:
 
